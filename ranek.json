@@ -13,21 +13,55 @@
     },
     {
       "id": "paulo@origamid.com",
-      "email": "paulo@origamid.com",
       "nome": "Paulo Silveira",
+      "email": "paulo@origamid.com",
       "senha": "12345",
-      "rua": "Rua Longe Daqui",
       "cep": "87654321",
+      "rua": "Rua Longe Daqui",
       "numero": "52",
-      "estado": "SP",
-      "cidade": "São Paulo"
+      "bairro": "Vila Siqueira (Zona Norte)",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    },
+    {
+      "id": "paulo@teste.com",
+      "nome": "Paulo Silveira",
+      "email": "paulo@teste.com",
+      "senha": "12345",
+      "cep": "02722090",
+      "rua": "Rua Paulo Vidigal Vicente de Azevedo",
+      "numero": "22",
+      "bairro": "Vila Siqueira (Zona Norte)",
+      "cidade": "SP",
+      "estado": "São Paulo"
+    },
+    {
+      "id": "teste@origamid.com",
+      "nome": "Paulo Silva",
+      "email": "teste@origamid.com",
+      "senha": "123",
+      "cep": "02722090",
+      "rua": "Rua Paulo Vidigal Vicente de Azevedo",
+      "numero": "265",
+      "bairro": "Vila Siqueira (Zona Norte)",
+      "cidade": "SP",
+      "estado": "São Paulo"
     }
   ],
   "produto": [
     {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "1999",
+      "vendido": "false",
+      "descricao": "Esse é um novo smartphone.",
+      "fotos": null
+    },
+    {
       "id": "notebook",
       "nome": "Notebook",
-      "usuario_id": "andre@origamid.com",
+      "usuario_id": "paulo@origamid.com",
       "preco": "4999",
       "vendido": "false",
       "descricao": "Esse é um novo notebook.",
@@ -36,7 +70,61 @@
     {
       "id": "smartphone",
       "nome": "Smartphone",
-      "usuario_id": "andre@origamid.com",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "1999",
+      "vendido": "false",
+      "descricao": "Esse é um novo smartphone.",
+      "fotos": null
+    },
+    {
+      "id": "tablet",
+      "nome": "Tablet",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "1399",
+      "vendido": "false",
+      "descricao": "Esse é um novo tablet.",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook.",
+      "fotos": null
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "1999",
+      "vendido": "false",
+      "descricao": "Esse é um novo smartphone.",
+      "fotos": null
+    },
+    {
+      "id": "tablet",
+      "nome": "Tablet",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "1399",
+      "vendido": "false",
+      "descricao": "Esse é um novo tablet.",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "paulo@origamid.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook.",
+      "fotos": null
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "paulo@origamid.com",
       "preco": "1999",
       "vendido": "false",
       "descricao": "Esse é um novo smartphone.",
@@ -52,85 +140,11 @@
       "fotos": null
     },
     {
-      "id": "notebook",
-      "nome": "Notebook",
-      "usuario_id": "andre@origamid.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é um novo notebook.",
-      "fotos": null
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
-    },
-    {
-      "id": "notebook",
-      "nome": "Notebook",
-      "usuario_id": "andre@origamid.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é um novo notebook.",
-      "fotos": null
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
-    },
-    {
-      "id": "notebook",
-      "nome": "Notebook",
-      "usuario_id": "andre@origamid.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é um novo notebook.",
-      "fotos": null
-    },
-    {
-      "id": "smartphone",
-      "nome": "Smartphone",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1999",
-      "vendido": "false",
-      "descricao": "Esse é um novo smartphone.",
-      "fotos": null
-    },
-    {
-      "id": "tablet",
-      "nome": "Tablet",
-      "usuario_id": "andre@origamid.com",
-      "preco": "1399",
-      "vendido": "false",
-      "descricao": "Esse é um novo tablet.",
-      "fotos": null
+      "nome": "Teclado",
+      "preco": 599,
+      "descricao": "Esse é um teclado gamer",
+      "usuario_id": "teste@origamid.com",
+      "id": "u4krS7R"
     }
   ]
 }

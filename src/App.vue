@@ -39,7 +39,8 @@ export default {
 
 body,
 button,
-input {
+input,
+textarea {
   font-family: "Josefin Sans", sans-serif;
   color: #345;
 }
@@ -53,6 +54,8 @@ ul {
 }
 
 a {
+  display: block;
+
   color: #345;
   text-decoration: none;
 }

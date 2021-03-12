@@ -1,9 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Produto from "../views/Produto.vue";
-import Login from "../views/Login.vue";
-import Usuario from "../views/Usuario/Usuario.vue";
+import Home from "../views/Home";
+import Produto from "../views/Produto";
+import Login from "../views/Login";
+import Usuario from "../views/Usuario/Usuario";
+import UsuarioProdutos from "../views/Usuario/UsuarioProdutos";
+import UsuarioEditar from "../views/Usuario/UsuarioEditar";
+import UsuarioCompras from "../views/Usuario/UsuarioCompras";
+import UsuarioVendas from "../views/Usuario/UsuarioVendas";
 
 Vue.use(VueRouter);
 
@@ -29,8 +33,29 @@ const router = new VueRouter({
     },
     {
       path: "/usuario",
-      name: "Usuario",
       component: Usuario,
+      children: [
+        {
+          path: "",
+          name: "Usuario",
+          component: UsuarioProdutos,
+        },
+        {
+          path: "compras",
+          name: "Compras",
+          component: UsuarioCompras,
+        },
+        {
+          path: "vendas",
+          name: "Vendas",
+          component: UsuarioVendas,
+        },
+        {
+          path: "usuario-editar",
+          name: "Usuario-editar",
+          component: UsuarioEditar,
+        },
+      ],
     },
   ],
   scrollBehavior() {

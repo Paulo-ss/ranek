@@ -18,8 +18,18 @@ export const api = {
   },
   // Requisições do tipo POST
   async post(endpoint, body) {
-    const response = await axiosRequest.post(endpoint, body);
-
-    return response;
+    await axiosRequest.post(endpoint, body);
   },
+  // Requisições do tipo PUT
+  async put(endpoint, body) {
+    await axiosRequest.put(endpoint, body);
+  },
+  // Requisições do tipo DELETE
+  async delete(endpoint) {
+    await axiosRequest.delete(endpoint);
+  },
+};
+
+export const getCep = (cep) => {
+  return axios.get(`https://viacep.com.br/ws/${cep}/json`);
 };
