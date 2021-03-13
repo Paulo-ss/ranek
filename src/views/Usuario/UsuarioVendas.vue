@@ -71,6 +71,8 @@ export default {
     if (this.login) {
       this.getVendas();
     }
+
+    document.title = "Suas vendas | Ranek";
   },
 };
 </script>
@@ -102,5 +104,16 @@ h2 {
 
 .entrega li + li {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .entrega {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .entrega h3 {
+    justify-self: start;
+  }
 }
 </style>

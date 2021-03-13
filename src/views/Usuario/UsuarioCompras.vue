@@ -56,6 +56,8 @@ export default {
     if (this.login) {
       this.getCompras();
     }
+
+    document.title = "Suas compras | Ranek";
   },
 };
 </script>

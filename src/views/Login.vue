@@ -22,6 +22,7 @@
       />
 
       <button type="submit" class="btn" @click.prevent="logar">Logar</button>
+      <ErroNotificacao :erros="erros" />
     </form>
 
     <p class="perdeu-senha">
@@ -34,6 +35,7 @@
 
 <script>
 import Cadastrar from "@/components/login/Cadastrar";
+import ErroNotificacao from "@/components/error/ErroNotificacao";
 
 export default {
   name: "Login",
@@ -43,17 +45,28 @@ export default {
         email: "",
         senha: "",
       },
+      erros: [],
     };
   },
   components: {
     Cadastrar,
+    ErroNotificacao,
   },
   methods: {
-    logar() {
-      this.$store.dispatch("getUsuario", this.login.email);
+    async logar() {
+      try {
+        this.erros = [];
 
-      this.$router.push({ name: "Usuario" });
+        this.$store.dispatch("getUsuario", this.login.email);
+
+        this.$router.push({ name: "Usuario" });
+      } catch (erro) {
+        this.erros.push(erro.response.data.message);
+      }
     },
+  },
+  created() {
+    document.title = "Faça seu login | Ranek";
   },
 };
 </script>

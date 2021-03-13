@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2>Crie a sua conta</h2>
+
     <transition mode="out-in">
       <button v-if="!criar" class="btn" @click="criar = true">
         Criar conta
@@ -11,25 +12,32 @@
         </button>
       </UsuarioForm>
     </transition>
+
+    <ErroNotificacao :erros="erros" />
   </section>
 </template>
 
 <script>
 import UsuarioForm from "@/components/usuario/UsuarioForm";
+import ErroNotificacao from "@/components/error/ErroNotificacao";
 
 export default {
   name: "Cadastrar",
   data() {
     return {
       criar: false,
+      erros: [],
     };
   },
   components: {
     UsuarioForm,
+    ErroNotificacao,
   },
   methods: {
     async cadastrarUsuario() {
       try {
+        this.erros = [];
+
         await this.$store.dispatch(
           "cadastrarUsuario",
           this.$store.state.usuario
@@ -41,7 +49,7 @@ export default {
 
         this.$router.push({ name: "Usuario" });
       } catch (error) {
-        console.log(error);
+        this.erros.push(error.response.data.message);
       }
     },
   },

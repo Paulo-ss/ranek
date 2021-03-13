@@ -50,6 +50,8 @@ export default {
       const response = await api.get(`/produto/${this.id}`);
 
       this.produto = response.data;
+
+      document.title = this.produto.nome + " | Ranek";
     },
   },
   created() {
@@ -79,6 +81,15 @@ export default {
   margin-bottom: 40px;
 }
 
+.fotos {
+  grid-row: 1 / 3;
+}
+
+.info {
+  position: sticky;
+  top: 20px;
+}
+
 .descricao {
   font-size: 1.2rem;
 }
@@ -86,5 +97,19 @@ export default {
 .btn {
   margin-top: 60px;
   width: 200px;
+}
+
+@media screen and (max-width: 500px) {
+  .produto {
+    grid-template-columns: 1fr;
+  }
+
+  .fotos {
+    grid-row: 2;
+  }
+
+  .info {
+    position: initial;
+  }
 }
 </style>

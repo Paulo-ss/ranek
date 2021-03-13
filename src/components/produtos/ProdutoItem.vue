@@ -55,4 +55,11 @@ export default {
   display: grid;
   gap: 10px;
 }
+
+@media screen and (max-width: 500px) {
+  .produto {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
 </style>

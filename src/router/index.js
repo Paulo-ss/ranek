@@ -8,6 +8,7 @@ import UsuarioProdutos from "../views/Usuario/UsuarioProdutos";
 import UsuarioEditar from "../views/Usuario/UsuarioEditar";
 import UsuarioCompras from "../views/Usuario/UsuarioCompras";
 import UsuarioVendas from "../views/Usuario/UsuarioVendas";
+import PaginaNaoEncontrada from "../views/PaginaNaoEncontrada";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,10 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: "*",
+      component: PaginaNaoEncontrada,
+    },
     {
       path: "/",
       name: "Home",
@@ -34,6 +39,9 @@ const router = new VueRouter({
     {
       path: "/usuario",
       component: Usuario,
+      meta: {
+        login: true,
+      },
       children: [
         {
           path: "",

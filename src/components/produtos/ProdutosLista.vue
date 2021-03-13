@@ -136,4 +136,13 @@ export default {
 .sem-resultados {
   text-align: center;
 }
+
+@media screen and (max-width: 500px) {
+  .produtos {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    margin: 10px;
+  }
+}
 </style>

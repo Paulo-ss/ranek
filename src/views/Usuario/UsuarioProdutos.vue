@@ -59,6 +59,8 @@ export default {
     if (this.login) {
       this.getUsuarioProdutos();
     }
+
+    document.title = "Seus produtos | Ranek";
   },
 };
 </script>

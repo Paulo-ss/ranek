@@ -3,11 +3,29 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import Carregando from "./components/helpers/Carregando";
+import ErroNotificacao from "./components/error/ErroNotificacao";
 
 Vue.config.productionTip = false;
 
+// Criando uma navigation guard caso o usuário tente
+// entrar em alguma rota que seja necessário estar
+// logado sem estar logado, ele seja redirecionado para
+// a página de login
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.login)) {
+    if (store.state.login) {
+      next("/Login");
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
 // Componentes globais
 Vue.component("Carregando", Carregando);
+Vue.component("ErroNotificacao", ErroNotificacao);
 
 // Filters globais
 Vue.filter("numeroPreco", (valor) => {
