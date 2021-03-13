@@ -51,5 +51,8 @@ export default {
 
 .info {
   align-self: end;
+
+  display: grid;
+  gap: 10px;
 }
 </style>

@@ -1,4 +1,50 @@
 {
+  "transacao": [
+    {
+      "comprador_id": "paulo@origamid.com",
+      "vendedor_id": "paulo@origamid.com",
+      "produto": {
+        "id": "notebook",
+        "nome": "Notebook",
+        "usuario_id": "paulo@origamid.com",
+        "preco": "4999",
+        "vendido": "false",
+        "descricao": "Esse é um novo notebook.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "87654321",
+        "rua": "Rua Longe Daqui",
+        "numero": "52",
+        "bairro": "Vila Siqueira (Zona Norte)",
+        "cidade": "São Paulo",
+        "estado": "SP"
+      },
+      "id": 1
+    },
+    {
+      "comprador_id": "teste@gmail.com",
+      "vendedor_id": "paulo@origamid.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "paulo@origamid.com",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "55515970",
+        "rua": "Praça Jorge Coelho da Silveira 135",
+        "numero": "789",
+        "bairro": "Centro",
+        "cidade": "PE",
+        "estado": "Amaraji"
+      },
+      "id": 2
+    }
+  ],
   "usuario": [
     {
       "id": "andre@origamid.com",
@@ -46,6 +92,18 @@
       "bairro": "Vila Siqueira (Zona Norte)",
       "cidade": "SP",
       "estado": "São Paulo"
+    },
+    {
+      "id": "teste@gmail.com",
+      "nome": "Paulo Teste",
+      "email": "teste@gmail.com",
+      "senha": "123456",
+      "cep": "55515970",
+      "rua": "Praça Jorge Coelho da Silveira 135",
+      "numero": "789",
+      "bairro": "Centro",
+      "cidade": "PE",
+      "estado": "Amaraji"
     }
   ],
   "produto": [

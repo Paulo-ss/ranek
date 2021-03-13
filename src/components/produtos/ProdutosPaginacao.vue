@@ -74,7 +74,8 @@ export default {
 </script>
 
 <style scoped>
-li {
+li,
+a {
   display: inline-block;
 }
 

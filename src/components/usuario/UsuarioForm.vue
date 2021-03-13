@@ -1,25 +1,27 @@
 <template>
   <form @submit.prevent>
-    <label for="nome">Nome</label>
-    <input
-      type="text"
-      name="nome"
-      id="nome"
-      v-model="nome"
-      autocomplete="off"
-    />
+    <div class="usuario" v-if="mostrarDadosLogin">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        v-model="nome"
+        autocomplete="off"
+      />
 
-    <label for="email">E-mail</label>
-    <input
-      type="email"
-      name="email"
-      id="email"
-      v-model="email"
-      autocomplete="off"
-    />
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        v-model="email"
+        autocomplete="off"
+      />
 
-    <label for="senha">Senha</label>
-    <input type="password" name="senha" id="senha" v-model="senha" />
+      <label for="senha">Senha</label>
+      <input type="password" name="senha" id="senha" v-model="senha" />
+    </div>
 
     <label for="cep">Cep</label>
     <input type="text" name="cep" id="cep" v-model="cep" />
@@ -67,6 +69,9 @@ export default {
         "estado",
       ],
     }),
+    mostrarDadosLogin() {
+      return !this.$store.state.login || this.$route.name === "Usuario-editar";
+    },
   },
   methods: {
     async preencherCep() {
@@ -91,10 +96,15 @@ export default {
 </script>
 
 <style scoped>
-form {
+form,
+.usuario {
   display: grid;
   grid-template-columns: 80px 1fr;
   align-items: center;
+}
+
+.usuario {
+  grid-column: 1 / 3;
 }
 
 .button {

@@ -3,7 +3,7 @@ import axios from "axios";
 // Criando uma instância do axios para definir
 // uma URL base para todas as requisições
 const axiosRequest = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "ranekapilocal.local",
 });
 
 export const api = {
